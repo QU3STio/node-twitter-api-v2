@@ -1,3 +1,7 @@
+# Fork modifications
+This fork modifies the original to get around a dependency on the `fs` package, in an attempt to use this as a browser package.
+Mainly this is accomplished by removing v1 support.
+
 # Twitter API v2
 
 [![Version badge](https://badgen.net/github/release/PLhery/node-twitter-api-v2)](https://github.com/PLhery/node-twitter-api-v2)
