@@ -10,7 +10,6 @@ import {
   TOAuth2Scope,
   Tweetv2SearchParams,
 } from '../types';
-import TwitterApiv1ReadOnly from '../v1/client.v1.read';
 import TwitterApiv2ReadOnly from '../v2/client.v2.read';
 import { OAuth2Helper } from '../client-mixins/oauth2.helper';
 import RequestParamHelpers from '../client-mixins/request-param.helper';
@@ -19,16 +18,9 @@ import RequestParamHelpers from '../client-mixins/request-param.helper';
  * Twitter v1.1 and v2 API client.
  */
 export default class TwitterApiReadOnly extends TwitterApiBase {
-  protected _v1?: TwitterApiv1ReadOnly;
   protected _v2?: TwitterApiv2ReadOnly;
 
   /* Direct access to subclients */
-
-  public get v1() {
-    if (this._v1) return this._v1;
-
-    return this._v1 = new TwitterApiv1ReadOnly(this);
-  }
 
   public get v2() {
     if (this._v2) return this._v2;

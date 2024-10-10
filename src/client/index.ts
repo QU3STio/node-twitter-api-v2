@@ -1,4 +1,4 @@
-import TwitterApiv1 from '../v1/client.v1';
+
 import TwitterApiv2 from '../v2/client.v2';
 import { TwitterApiError } from '../types';
 import TwitterApiReadWrite from './readwrite';
@@ -9,15 +9,8 @@ import TwitterApiReadWrite from './readwrite';
  * Twitter v1.1 and v2 API client.
  */
 export class TwitterApi extends TwitterApiReadWrite {
-  protected _v1?: TwitterApiv1;
   protected _v2?: TwitterApiv2;
 
-  /* Direct access to subclients */
-  public get v1() {
-    if (this._v1) return this._v1;
-
-    return this._v1 = new TwitterApiv1(this);
-  }
 
   public get v2() {
     if (this._v2) return this._v2;

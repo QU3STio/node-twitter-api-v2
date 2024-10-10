@@ -140,10 +140,9 @@ export interface MediaSubtitleV1Param {
  * Link to a file that is usable as media.
  * - `string`: File path
  * - `Buffer`: File content, as binary buffer
- * - `fs.promises.FileHandle`: Opened file with `fs.promises`
  * - `number`: Opened file with `fs` classic functions
  */
-export type TUploadableMedia = string | Buffer | fs.promises.FileHandle | number;
+export type TUploadableMedia = string | Buffer | number;
 
 export interface OembedTweetV1Params {
   url: string;
