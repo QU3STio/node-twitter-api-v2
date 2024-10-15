@@ -32,7 +32,10 @@
     "test-plugin": "npm run mocha test/plugin.test.ts",
     "prepublish": "npm run build"
   },
-  "repository": "https://github.com/QU3STio/node-twitter-api-v2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QU3STio/node-twitter-api-v2.git"
+  },
   "author": "Paul-Louis Hery <paullouis.hery+twitterapi@gmail.com> (https://x.com/plhery)",
   "license": "Apache-2.0",
   "files": [
